@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adita.Extensions.DependencyInjection", "Adita.Extensions.DependencyInjection\Adita.Extensions.DependencyInjection.csproj", "{19102700-0C18-49C9-9EBA-9FC3F60C61C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adita.Extensions.DependencyInjection.Test", "Adita.Extensions.DependencyInjection.Test\Adita.Extensions.DependencyInjection.Test.csproj", "{37962709-B7A8-44E2-A361-F24D787B8EF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19102700-0C18-49C9-9EBA-9FC3F60C61C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19102700-0C18-49C9-9EBA-9FC3F60C61C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19102700-0C18-49C9-9EBA-9FC3F60C61C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19102700-0C18-49C9-9EBA-9FC3F60C61C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37962709-B7A8-44E2-A361-F24D787B8EF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37962709-B7A8-44E2-A361-F24D787B8EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37962709-B7A8-44E2-A361-F24D787B8EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37962709-B7A8-44E2-A361-F24D787B8EF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05AB9E07-1480-4B75-9374-7D40D06F0D76}
+	EndGlobalSection
+EndGlobal

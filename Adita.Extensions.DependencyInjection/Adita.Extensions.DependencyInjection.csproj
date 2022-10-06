@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Title>Adita.Extensions.DependencyInjection</Title>
+    <Version>1.0.0.0</Version>
+    <Authors>Setya Adi Kurnia</Authors>
+    <Company>Adita</Company>
+    <Description>A dependency injection extensions that targeting .NET 6</Description>
+    <Copyright>©2022 Adita</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Adita.Identity.Core">
+      <HintPath>..\..\Adita.Identity\Adita.Identity.Core\bin\Release\net6.0\Adita.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Adita.Identity.EntityFrameworkCore">
+      <HintPath>..\..\Adita.Identity\Adita.Identity.EntityFrameworkCore\bin\Release\net6.0\Adita.Identity.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Adita.Security">
+      <HintPath>..\..\Adita.Identity\Adita.Identity.Core\bin\Release\net6.0\Adita.Security.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

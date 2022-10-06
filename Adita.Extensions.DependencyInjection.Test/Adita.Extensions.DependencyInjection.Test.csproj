@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="6.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.2.8" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.2.8" />
+    <PackageReference Include="coverlet.collector" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Adita.Extensions.DependencyInjection\Adita.Extensions.DependencyInjection.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Adita.Extensions.Logging">
+      <HintPath>..\..\Adita.Extensions.Logging\Adita.Extensions.Logging\bin\Release\net6.0\Adita.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Adita.Identity.Core">
+      <HintPath>..\..\Adita.Identity\Adita.Identity.Core\bin\Release\net6.0\Adita.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Adita.Identity.EntityFrameworkCore">
+      <HintPath>..\..\Adita.Identity\Adita.Identity.EntityFrameworkCore\bin\Release\net6.0\Adita.Identity.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
