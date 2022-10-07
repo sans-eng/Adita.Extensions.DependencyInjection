@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Adita.Extensions.Logging" Version="1.0.0" />
+    <PackageReference Include="Adita.Identity.Core" Version="1.0.0" />
+    <PackageReference Include="Adita.Identity.EntityFrameworkCore" Version="1.0.0" />
+    <PackageReference Include="Adita.Security" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.9" />
     <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="6.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
@@ -19,21 +23,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Adita.Extensions.DependencyInjection\Adita.Extensions.DependencyInjection.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Adita.Extensions.Logging">
-      <HintPath>..\..\Adita.Extensions.Logging\Adita.Extensions.Logging\bin\Release\net6.0\Adita.Extensions.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="Adita.Identity.Core">
-      <HintPath>..\..\Adita.Identity\Adita.Identity.Core\bin\Release\net6.0\Adita.Identity.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Adita.Identity.EntityFrameworkCore">
-      <HintPath>..\..\Adita.Identity\Adita.Identity.EntityFrameworkCore\bin\Release\net6.0\Adita.Identity.EntityFrameworkCore.dll</HintPath>
-    </Reference>
-    <Reference Include="Adita.Security">
-      <HintPath>..\..\Adita.Identity\Adita.Identity.Core\bin\Release\net6.0\Adita.Security.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>
