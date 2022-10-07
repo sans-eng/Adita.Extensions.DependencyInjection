@@ -11,7 +11,29 @@
     <Company>Adita</Company>
     <Description>A dependency injection extensions that targeting .NET 6</Description>
     <Copyright>©2022 Adita</Copyright>
+    <PackageIcon>favicon.png</PackageIcon>
+    <RepositoryUrl>https://github.com/sans-eng/Adita.Extensions.DependencyInjection</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>Extensions; DependencyInjection; NET6;</PackageTags>
+    <PackageReleaseNotes>First release</PackageReleaseNotes>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Designs\favicon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Adita.Identity.Core" Version="1.0.0" />
