@@ -180,30 +180,15 @@ namespace Adita.Extensions.DependencyInjection.Identity
                             .AddRoleManager<RoleManager<TKey, TRole, TRoleClaim>>()
                             .AddSignInManager<SignInManager<TKey, TUser, TRole>>()
                             .AddLookupNormalizer<UpperInvariantLookupNormalizer>()
+                            .AddUserRepository<UserRepository<TKey, TUser>>()
+                            .AddUserClaimRepository<UserClaimRepository<TKey, TUserClaim>>()
+                            .AddUserRoleRepository<UserRoleRepository<TKey, TUserRole>>()
+                            .AddRoleRepository<RoleRepository<TKey, TRole>>()
+                            .AddRoleClaimRepository<RoleClaimRepository<TKey, TRoleClaim>>()
                             .ConfigureIdentityOptions(setupAction);
-
-            AddRepositories<TKey, TUser, TUserClaim, TUserRole, TRole, TRoleClaim>(builder.Services);
 
             return builder;
         }
         #endregion Public methods
-
-        #region Private methods
-        private static void AddRepositories<TKey, TUser, TUserClaim, TUserRole, TRole, TRoleClaim>
-            (this IServiceCollection serviceDescriptors)
-            where TKey : IEquatable<TKey>
-            where TUser : IdentityUser<TKey>, new()
-            where TUserClaim : IdentityUserClaim<TKey>, new()
-            where TUserRole : IdentityUserRole<TKey>, new()
-            where TRole : IdentityRole<TKey>, new()
-            where TRoleClaim : IdentityRoleClaim<TKey>, new()
-        {
-            serviceDescriptors.TryAddScoped<IUserRepository<TKey, TUser>, UserRepository<TKey, TUser>>();
-            serviceDescriptors.TryAddScoped<IUserClaimRepository<TKey, TUserClaim>, UserClaimRepository<TKey, TUserClaim>>();
-            serviceDescriptors.TryAddScoped<IUserRoleRepository<TKey, TUserRole>, UserRoleRepository<TKey, TUserRole>>();
-            serviceDescriptors.TryAddScoped<IRoleRepository<TKey, TRole>, RoleRepository<TKey, TRole>>();
-            serviceDescriptors.TryAddScoped<IRoleClaimRepository<TKey, TRoleClaim>, RoleClaimRepository<TKey, TRoleClaim>>();
-        }
-        #endregion Private methods
     }
 }
