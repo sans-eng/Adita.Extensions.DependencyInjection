@@ -43,6 +43,7 @@ using Adita.Identity.EntityFrameworkCore.Services.Repositories.RoleRepositories;
 using Adita.Identity.EntityFrameworkCore.Services.Repositories.UserClaimRepositories;
 using Adita.Identity.EntityFrameworkCore.Services.Repositories.UserRepositories;
 using Adita.Identity.EntityFrameworkCore.Services.Repositories.UserRoleRepositories;
+using Adita.Security.Authorization;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
@@ -186,6 +187,8 @@ namespace Adita.Extensions.DependencyInjection.Identity
                             .AddRoleRepository<RoleRepository<TKey, TRole>>()
                             .AddRoleClaimRepository<RoleClaimRepository<TKey, TRoleClaim>>()
                             .ConfigureIdentityOptions(setupAction);
+
+            builder.Services.AddScoped<IAuthorizationManager, AuthorizationManager>();
 
             return builder;
         }
