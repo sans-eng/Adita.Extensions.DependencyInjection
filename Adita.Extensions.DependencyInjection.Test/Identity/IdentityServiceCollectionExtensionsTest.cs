@@ -18,6 +18,7 @@ using Adita.Identity.Core.Services.Repositories.UserRoleRepositories;
 using Adita.Identity.Core.Services.RoleValidators;
 using Adita.Identity.Core.Services.UserValidators;
 using Adita.Identity.EntityFrameworkCore.Models.DbContexts;
+using Adita.Security.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;
@@ -113,6 +114,9 @@ namespace Adita.Extensions.DependencyInjection.Test.Identity
 
             var repositoryOptionsGetter = serviceProvider.GetRequiredService<IOptions<RepositoryOptions>>();
             Assert.IsNotNull(repositoryOptionsGetter);
+
+            IAuthorizationManager authorizationManager = serviceProvider.GetRequiredService<IAuthorizationManager>();
+            Assert.IsNotNull(authorizationManager);
         }
     }
 }
